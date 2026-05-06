@@ -1,0 +1,31 @@
+setup:
+  log_dir: experiments/logs
+  cuda: true
+  debug_mode: false
+  seed_start: 0
+  seed_runs: 1
+
+run:
+  episodes: 1
+  samples: 10
+  trajectories: 10
+  generations: 10
+  keep_top_samples: 3
+  use_normalization: false
+  evaluate_state_sequence: true
+  stagnation_threshold: 5
+
+llm:
+  model: qwen3-32b-instruct
+  api_key: "YOUR_API_KEY_HERE"
+  max_tokens: 4096
+  temperature: 0.9
+  top_p: 1.0
+
+methods_to_evaluate:
+  - TimeCoder
+
+envs_to_evaluate:
+
+datasets:
+%
